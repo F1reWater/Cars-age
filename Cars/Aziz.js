@@ -49,7 +49,7 @@ function reload(arr) {
         let btn = document.createElement('button')
         let link = document.createElement('a') 
 
-        link.href = 'Descr.html'
+        link.href = `Descr.html?id=${element.id_}`
 
         box.classList.add('box')
         name.classList.add('name')

@@ -59,4 +59,33 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
+}
+.obj{
+    margin-left: 25px;
+    color: grey;
+    font-weight: 500;
+}
+.inf{
+    width: 200px;
+}
+.main-btn{
+    width: 200px;
+}
+.information{
+    font-weight: 700;
+    font-size: 15px;
+}
+.info{
+    width: 700px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 0px auto;
+}
+.main-btn{
+    width: 200px;
 }

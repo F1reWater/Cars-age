@@ -9,8 +9,31 @@
 </head>
 <body>
     <div class="descr">
-        
+        <h1></h1>
+        <span class="obj"></span>
+        <a href="" class=" inf"><button class="btn">О нас</button></a>
+        <a href="" class=" main-btn"><button class="btn">Назад</button></a>
     </div>
-    <script src="./Aziz.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        let base_url =  "http://localhost:3001"
+        let id = window.location.href.split('=').at(-1)
+        let h1 = document.querySelector('h1')
+        let span = document.querySelector('.obj')
+        let inf = document.querySelector('.inf')
+        let mainBtn = document.querySelector('.main-btn')
+
+        axios.get(base_url + "/cars?id=" + id)
+        .then(res => {
+            if(res.status === 200 || res.status === 201) {
+                let {manufacturer,model,year} = res.data[0]
+                h1.innerHTML = manufacturer + " " + model
+                span.innerHTML = res.data[0]
+                inf.href = `info.html`
+                mainBtn.href = `Aziz.html`
+            }
+        })
+    </script>
 </body>
 </html>
